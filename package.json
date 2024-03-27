@@ -1,26 +1,29 @@
 {
-  "name": "vscode-nvm",
-  "displayName": "vscode-nvm",
-  "description": "",
+  "name": "vs-nvm",
+  "displayName": "vs-nvm",
+  "description": "VSCode extension for auto switch version",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.87.0"
+    "vscode": "^1.87.0",
+    "node": ">=16.0.0 <100.0.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "keywords": [
+    "nvm",
+    "vscode-nvm",
+    "vs-nvm"
+  ],
+  "activationEvents": ["*"],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "vscode-nvm.helloWorld",
-        "title": "Hello World"
-      }
-    ]
+    "commands": []
   },
+  "icon": "images/nvm-1080.jpg",
   "scripts": {
     "vscode:prepublish": "yarn run compile",
+    "build": "vsce package",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile && yarn run lint",
